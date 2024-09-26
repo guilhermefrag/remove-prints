@@ -31,14 +31,12 @@ This extension currently supports the following languages:
 2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
 3. Search for **Remove Prints**.
 4. Click **Install** to add the extension to your VSCode.
-5. Ctrl + Shift + P and search **Remove Prints**.
-6. Select the folder to remove the prints
 
 ## Usage
 
 1. Open a code file in one of the supported languages.
 2. Use the command palette (Ctrl+Shift+P or Cmd+Shift+P on macOS).
-3. Type **Remove Print Statements** and select the command to remove all print statements from the current file.
+3. Search **Remove Prints** and select the folder to remove the prints.
 
 ## Contribution
 

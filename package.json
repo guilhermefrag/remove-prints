@@ -45,5 +45,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/guilhermefrag/remove-prints"
-  }
+  },
+  "icon": "assets/console-log.png"
 }
