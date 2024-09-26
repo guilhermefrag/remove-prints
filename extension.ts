@@ -24,7 +24,6 @@ export function removeOutputMessageFromFile(filePath: string) {
         newContent = newContent.replace(pattern, '');
     }
 
-    
     if (fileContent !== newContent) {
         fs.writeFileSync(filePath, newContent, 'utf-8');
         vscode.window.showInformationMessage(`Removed logs from ${filePath}`);
@@ -58,15 +57,19 @@ function removeOutputMessageFromFolder(folderPath: string) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    const disposable = vscode.commands.registerCommand('extension.removeOutputMessage', () => {
-        const folderUri = vscode.workspace.workspaceFolders?.[0].uri;
+    const disposable = vscode.commands.registerCommand('extension.removeOutputMessage', async () => {
+        const folderUri = await vscode.window.showOpenDialog({
+            canSelectFolders: true,
+            canSelectMany: false,
+            openLabel: 'Select Folder'
+        });
 
-        if (folderUri) {
-            const folderPath = folderUri.fsPath;
+        if (folderUri && folderUri[0]) {
+            const folderPath = folderUri[0].fsPath;
             removeOutputMessageFromFolder(folderPath);
-            vscode.window.showInformationMessage('All log statements have been removed!');
+            vscode.window.showInformationMessage(`All log statements removed from files in ${folderPath}`);
         } else {
-            vscode.window.showErrorMessage('No workspace folder found');
+            vscode.window.showErrorMessage('No folder selected');
         }
     });
 
