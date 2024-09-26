@@ -2,7 +2,7 @@
   "name": "remove-prints",
   "displayName": "remove-prints",
   "description": "remove any prints on project to not deploy them on production",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "guilhermefrag",
   "license": "MIT",
   "engines": {
