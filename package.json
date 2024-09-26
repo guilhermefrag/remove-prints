@@ -3,6 +3,8 @@
   "displayName": "remove-prints",
   "description": "remove any prints on project to not deploy them on production",
   "version": "0.0.1",
+  "publisher": "guilhermefrag",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -39,5 +41,9 @@
     "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.9.1",
     "typescript": "^5.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guilhermefrag/remove-prints"
   }
 }
